@@ -69,7 +69,7 @@ Section:NewTextBox("Player Name", "nikilis face reveal on player", function(txt)
 getgenv().txt = txt
 tonumber(getgenv().txt)
 end)
-Section:NewButton("Nikilis Face Reveal on player", "create decal on player", function()
+Section:NewButton("Nikilis Face Reveal on player", "create decal on player", function(txt)
     local args = {
     [1] = 16411031512,
     [2] = Enum.NormalId.Front,
