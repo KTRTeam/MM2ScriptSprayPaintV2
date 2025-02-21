@@ -65,6 +65,21 @@ game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(un
 end
 
 end)
+Section:NewTextBox("Player Name", "nikilis face reveal on player", function(txt)
+getgenv().txt = txt
+tonumber(getgenv().txt)
+end)
+Section:NewButton("Nikilis Face Reveal on player", "create decal on player", function()
+    local args = {
+    [1] = 16411031512,
+    [2] = Enum.NormalId.Front,
+    [3] = 5,
+    [4] = game.Players.LocalPlayer.Character.HumanoidRootPart,
+    [5] = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,4.3,0)
+}
+
+game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
+end)
 local Tab = Window:NewTab("Misc")
 local Section = Tab:NewSection("Speed, Jump, Reset, Esp")
 Section:NewButton("Speed", "WalkSpeed = 50", function()
