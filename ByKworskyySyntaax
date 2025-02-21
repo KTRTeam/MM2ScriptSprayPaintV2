@@ -139,3 +139,6 @@ Section:NewButton("Esp", "highlight esp", function()
     end
 end)
 end)
+Section:NewButton("Reset", "Health = 0", function()
+    game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end)
