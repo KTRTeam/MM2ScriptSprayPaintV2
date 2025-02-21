@@ -1,0 +1,141 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
+local Window = Library.CreateLib("Kworskyy Funny Spray Paint V2", "RJTheme4")
+local Tab = Window:NewTab("Funny")
+local Section = Tab:NewSection("USE SCRIPT ONLY WITH SPRAY IN HAND!!!")
+Section:NewButton("Comming Soon Spray", "create spray in lobby", function()
+    while wait(3.5) do
+local args = {
+    [1] = 109559440320458,
+    [2] = Enum.NormalId.Back,
+    [3] = 5,
+    [4] = workspace.Lobby.MainLobby.Parts.Part,
+    [5] = CFrame.new(-125.8406982421875, 143.2578582763672, 20.80006408691406) * CFrame.Angles(-3.075061559677124, 0.03003382310271263, 3.139591932296753)
+}
+
+game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
+end
+end)
+Section:NewButton("Nikilis On You", "create nikilis on u", function()
+    local args = {
+    [1] = 14874425459,
+    [2] = Enum.NormalId.Back,
+    [3] = 5,
+    [4] = workspace.Lobby.MainLobby.Parts.Part,
+    [5] = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,0,0)
+}
+
+game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
+
+end)
+Section:NewButton("Spray Paint On You", "create spray on u", function()
+    local args = {
+    [1] = 539578850,
+    [2] = Enum.NormalId.Back,
+    [3] = 5,
+    [4] = workspace.Lobby.MainLobby.Parts.Part,
+    [5] = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,0,0)
+}
+
+game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
+
+end)
+Section:NewButton("Coin On You", "create coin on u", function()
+    local args = {
+    [1] = 124844454717039,
+    [2] = Enum.NormalId.Back,
+    [3] = 5,
+    [4] = workspace.Lobby.MainLobby.Parts.Part,
+    [5] = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,0,0)
+}
+
+game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
+
+end)
+Section:NewButton("3 HP On You", "create 3HP On You", function()
+    while wait(3.5) do
+local args = {
+    [1] = 18156094110,
+    [2] = Enum.NormalId.Front,
+    [3] = 5,
+    [4] = game.Players.LocalPlayer.Character.HumanoidRootPart,
+    [5] = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,4.3,0)
+}
+
+game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
+end
+
+end)
+local Tab = Window:NewTab("Misc")
+local Section = Tab:NewSection("Speed, Jump, Reset, Esp")
+Section:NewButton("Speed", "WalkSpeed = 50", function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+end)
+Section:NewButton("Jump", "JumpPower = 50", function()
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 100
+end)
+Section:NewButton("Esp", "highlight esp", function()
+    game:GetService("RunService").RenderStepped:Connect(function()
+    for _, plr in pairs(game.Players:GetChildren()) do
+        if plr.Character and plr ~= game.Players.LocalPlayer then
+            if plr.Backpack:FindFirstChild("Knife") or plr.Character:FindFirstChild("Knife") then
+                if not plr.Character:FindFirstChild("MM2MDR") then
+                    local hl = Instance.new("Highlight")
+                    hl.Parent = plr.Character
+                    hl.FillTransparency = 1
+                    hl.OutlineTransparency = 0
+                    hl.OutlineColor = Color3.fromRGB(255, 0, 0)
+                    hl.Name = "MM2MDR"
+                end
+                if plr.Character:FindFirstChild("MM2MDB") then
+                    plr.Character:FindFirstChild("MM2MDB"):Destroy()
+                end
+                if plr.Character:FindFirstChild("MM2MDW") then
+                    plr.Character:FindFirstChild("MM2MDW"):Destroy()
+                end
+            elseif plr.Backpack:FindFirstChild("Gun") or plr.Character:FindFirstChild("Gun") then
+                if not plr.Character:FindFirstChild("MM2MDB") then
+                    local hl = Instance.new("Highlight")
+                    hl.Parent = plr.Character
+                    hl.FillTransparency = 1
+                    hl.OutlineTransparency = 0
+                    hl.OutlineColor = Color3.fromRGB(0, 0, 255)
+                    hl.Name = "MM2MDB"
+                end
+                if plr.Character:FindFirstChild("MM2MDW") then
+                    plr.Character:FindFirstChild("MM2MDW"):Destroy()
+                end
+                if plr.Character:FindFirstChild("MM2MDR") then
+                    plr.Character:FindFirstChild("MM2MDR"):Destroy()
+                end
+            else
+                if not plr.Character:FindFirstChild("MM2MDW") then
+                    local hl = Instance.new("Highlight")
+                    hl.Parent = plr.Character
+                    hl.FillTransparency = 1
+                    hl.OutlineTransparency = 0
+                    hl.OutlineColor = Color3.fromRGB(255, 255, 255)
+                    hl.Name = "MM2MDW"
+                end
+                if plr.Character:FindFirstChild("MM2MDB") then
+                    plr.Character:FindFirstChild("MM2MDB"):Destroy()
+                end
+                if plr.Character:FindFirstChild("MM2MDR") then
+                    plr.Character:FindFirstChild("MM2MDR"):Destroy()
+                end
+            end
+        end
+    end
+
+    if workspace:FindFirstChild("GunDrop") then
+        if not workspace.GunDrop:FindFirstChild("MM2MDG") then
+            local hl = Instance.new("Highlight")
+            hl.Parent = workspace.GunDrop
+            hl.FillTransparency = 0.5
+            hl.OutlineTransparency = 0
+            hl.OutlineColor = Color3.fromRGB(0, 255, 0)
+            hl.FillColor = Color3.fromRGB(255, 180, 29)
+            hl.Name = "MM2MDG"
+        end
+    end
+end)
+end)
