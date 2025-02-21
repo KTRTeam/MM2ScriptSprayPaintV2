@@ -78,7 +78,8 @@ end
 
 end)
 Section:NewButton("Nikilis Face Reveal on player", "create decal on player", function()
-    local args = {
+    while wait(3.7) do
+local args = {
     [1] = 16411031512,
     [2] = Enum.NormalId.Front,
     [3] = 5,
@@ -87,6 +88,8 @@ Section:NewButton("Nikilis Face Reveal on player", "create decal on player", fun
 }
 
 game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
+end
+
 end)
 local Tab = Window:NewTab("Misc")
 local Section = Tab:NewSection("Speed, Jump, Reset, Esp")
