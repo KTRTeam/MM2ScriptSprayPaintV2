@@ -65,7 +65,7 @@ game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(un
 end
 
 end)
-Section:NewButton("Nikilis Face Reveal on player", "create decal on player", function(txt)
+Section:NewButton("Nikilis Face Reveal on player", "create decal on player", function()
     local args = {
     [1] = 16411031512,
     [2] = Enum.NormalId.Front,
