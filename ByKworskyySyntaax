@@ -39,6 +39,18 @@ Section:NewButton("Spray Paint On You", "create spray on u", function()
 game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
 
 end)
+Section:NewButton("Nikilis Face Reveal in You", "create nikilis in u", function()
+    local args = {
+    [1] = 16411031512,
+    [2] = Enum.NormalId.Back,
+    [3] = 5,
+    [4] = workspace.Lobby.MainLobby.Parts.Part,
+    [5] = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,0,0)
+}
+
+game:GetService("Players").LocalPlayer.Character.SprayPaint.Remote:FireServer(unpack(args))
+
+end)
 Section:NewButton("Coin On You", "create coin on u", function()
     local args = {
     [1] = 124844454717039,
